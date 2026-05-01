@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NoVi – Your ride. On time.</title>
+  <meta name="description" content="NoVi je aplikacija za novu generaciju električnog urbanog prevoza." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="#top" class="logo-wrap" aria-label="NoVi početna">
+      <img src="assets/novi-logo.png" alt="NoVi logo" class="logo" />
+    </a>
+    <nav class="nav-links" aria-label="Glavna navigacija">
+      <a href="#about">O aplikaciji</a>
+      <a href="#features">Prednosti</a>
+      <a href="#app-contact">Aplikacija</a>
+      <a href="#app-contact">Kontakt</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">NoVi electric mobility</p>
+        <h1>Pametna vožnja.<br><span>Električna budućnost.</span></h1>
+        <p class="hero-text">NoVi je aplikacija koja donosi novu generaciju urbanog prevoza — potpuno električnu, tihu i održivu.</p>
+        <a href="#app-contact" class="primary-btn">Kontaktirajte nas</a>
+      </div>
+    </section>
+
+    <section id="about" class="intro section-dark">
+      <p class="section-label">O aplikaciji</p>
+      <h2>Nova generacija mobilnosti</h2>
+      <p>NoVi redefiniše način na koji se krećemo kroz grad. Fokusirani smo na električna vozila, vrhunsko korisničko iskustvo i pouzdanu uslugu koja odgovara savremenom načinu života.</p>
+      <p>Naša misija je jednostavna — omogućiti brz, efikasan i ekološki prihvatljiv prevoz, uz maksimalnu udobnost za korisnike.</p>
+    </section>
+
+    <section id="features" class="features section-dark">
+      <div class="feature-card">
+        <div class="icon">⚡</div>
+        <h3>100% električno</h3>
+        <p>Sva vozila u sistemu su električna — bez emisije i uz minimalnu buku.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📱</div>
+        <h3>Jednostavna aplikacija</h3>
+        <p>Brzo naručivanje vožnje kroz intuitivnu mobilnu aplikaciju.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🌿</div>
+        <h3>Održiva budućnost</h3>
+        <p>Doprinosimo čistijem gradu i modernijem načinu prevoza.</p>
+      </div>
+    </section>
+
+    <section id="app-contact" class="app-contact">
+
+      <!-- APP -->
+      <div class="app-left">
+        <p class="section-label">APLIKACIJA</p>
+        <h2>Aplikacija uskoro dostupna</h2>
+        <p>
+          NoVi aplikacija će uskoro biti dostupna za preuzimanje.
+          Budite među prvima koji će isprobati novu generaciju mobilnosti.
+        </p>
+
+        <div class="store-badges">
+
+          <a class="badge disabled">
+            <img src="assets/app-store-badge.png" alt="Download on App Store">
+          </a>
+
+          <a class="badge disabled">
+            <img src="assets/google-play-badge.png" alt="Get it on Google Play">
+          </a>
+
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="app-right">
+        <p class="section-label">KONTAKT</p>
+        <h2>Kontaktirajte nas</h2>
+        <p>
+          Imate pitanje ili želite saradnju?<br>
+          Javite nam se — tu smo da pomognemo.
+        </p>
+
+        <form class="contact-form">
+          <div class="form-row">
+            <input type="text" placeholder="Ime i prezime" required />
+            <input type="email" placeholder="E-mail" required />
+          </div>
+
+          <textarea placeholder="Vaša poruka" required></textarea>
+
+          <button type="submit">
+            Pošaljite poruku ➤
+          </button>
+        </form>
+      </div>
+
+    </section>
+
+
+  </main>
+
+  <footer class="footer">
+    <img src="assets/novi-logo.png" alt="NoVi logo" />
+    <p>© 2026 NoVi. Sva prava zadržana.</p>
+  </footer>
+
+  <script>
+    let lastScrollY = window.scrollY;
+    const header = document.querySelector(".site-header");
+
+    window.addEventListener("scroll", () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 120) {
+        header.classList.add("header-hidden");
+      } else {
+        header.classList.remove("header-hidden");
+      }
+
+      lastScrollY = currentScrollY;
+    });
+  </script>
+</body>
+</html>
